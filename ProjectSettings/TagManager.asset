@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - yard
+  - main
+  - cafe
+  - gym
+  - main-gym
+  - gymcafe
+  - cafeyard
+  - Guard
+  - Enemy
+  - bullet
+  - hallway
+  - walls
   layers:
   - Default
   - TransparentFX
@@ -13,6 +25,9 @@ TagManager:
   - UI
   - 
   - 
+  - FightEnemy
+  - 
+  - Player
   - 
   - 
   - 
@@ -22,10 +37,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Effects
   - 
   - 
   - 

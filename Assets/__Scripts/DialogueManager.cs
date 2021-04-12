@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueActive;
 
+    public string[] dialogueLines;
+    public int currentLine;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +26,20 @@ public class DialogueManager : MonoBehaviour
     {
         if(dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
+            //dBox.SetActive(false);
+            //dialogueActive = false;
+
+            currentLine++;
+        }
+        if(currentLine >= dialogueLines.Length)
+        {
             dBox.SetActive(false);
             dialogueActive = false;
+
+            currentLine = 0;
         }
+
+        dText.text = dialogueLines[currentLine]; 
     }
 
     public void ShowBox(string dialogue)
@@ -39,5 +53,16 @@ public class DialogueManager : MonoBehaviour
     {
         //buttonActive = true;
         startQuiz.SetActive(true);
+    }
+
+    public void ShowDialogue()
+    {
+        dialogueActive = true;
+        dBox.SetActive(true);
+    }
+    public void NextLevel()
+    {
+        startQuiz.SetActive(false);
+        dBox.SetActive(false);
     }
 }
