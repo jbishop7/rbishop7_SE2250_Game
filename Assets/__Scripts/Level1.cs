@@ -60,5 +60,10 @@ public class Level1 : MonoBehaviour
             Debug.Log("Hallway");
             txt.text = "Hallway";
         }
+        if (other.gameObject.CompareTag("Guard Area"))
+        {
+            Debug.Log("Guard Area");
+            txt.text = "Guard Area";
+        }
     }
 }

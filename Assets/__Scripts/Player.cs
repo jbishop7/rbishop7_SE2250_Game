@@ -323,6 +323,16 @@ public class Player : MonoBehaviour
         return movement;
     }
 
+    public bool getLevel1()
+    {
+        return level1Complete;
+    }
+
+    public bool getLevel2()
+    {
+        return level2Complete;
+    }
+
     public void increaseKills()
     {
         kills++;
